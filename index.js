@@ -1,5 +1,4 @@
 
-// Issue with muliple uppercase and lowercase together scenario , please correct it.
 function shout(string) {
   return string.toUpperCase()
 }
@@ -10,25 +9,26 @@ function whisper(string) {
 
 function logShout(string){
   console.log(string.toUpperCase())
+
 }
 
 function logWhisper(string){
   console.log(string.toLowerCase())
 }
 
-function sayHiToGrandma(string){
- var uppercase = "YES INDEED!"
- var lowercase = "I can't hear you!"
- 
- 
-if (uppercase.toUpperCase() === uppercase){// true
-  string = uppercase
-}
-else if (lowercase.toLowerCase() === lowercase){ // true
-string = lowercase
+function sayHiToGrandma(string) {
+   if ((string.toLowerCase()) === string) {
+    return "I can't hear you!";
+  }
+
+  if ((string.toUpperCase()) === string) {
+     return "YES INDEED!"
+  }
+
+  if (string === "I love you, Grandma.") {
+   return "I love you, too."
+  }
+  return "Are you eating enough?"
 }
 
-return string;
-
-}
 
